@@ -1,0 +1,9 @@
+#!/bin/bash -e
+/sbin/modprobe br_netfilter
+/sbin/modprobe ip_vs
+/sbin/modprobe ip_vs_rr
+/sbin/modprobe ip_vs_wrr
+/sbin/modprobe ip_vs_sh
+/sbin/modprobe nf_conntrack_ipv4
+echo "rc.local is executed" >> /tmp/mylog.txt
+exit 0
